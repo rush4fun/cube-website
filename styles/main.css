@@ -1,0 +1,349 @@
+/* @include adaptiv-font(40, 16); */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Lekton";
+  src: url("../fonts/lekton/Lekton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lekton Bold";
+  src: url("../fonts/lekton/Lekton-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lekton Italic";
+  src: url("../fonts/lekton/Lekton-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald Italic";
+  src: url("../fonts/Oswald/Oswald-Italic.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  order: 1;
+}
+
+main {
+  order: 2;
+}
+
+footer {
+  order: 3;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.header .container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.header .block {
+  flex-basis: 50%;
+}
+
+.header .block .inner {
+  padding: 3.75rem 4.6875rem;
+}
+
+.header .block .inner .content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8.4375rem;
+}
+
+.header .block .inner .content .logo {
+  margin-bottom: 10px;
+}
+
+.header .block .inner .content .title {
+  white-space: pre-line;
+  color: #46b4b4;
+}
+
+.header .block .inner .content .title::first-line {
+  color: #4eabab;
+}
+
+.header .block .inner .media {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.header .block .inner .media .soc-media {
+  display: flex;
+  flex-basis: 35%;
+  justify-content: space-between;
+}
+
+.header .block .inner .media .soc-media__icon {
+  color: #46b4b4;
+}
+
+.header .block .inner .media .contact {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: space-between;
+}
+
+.header .block .inner .media .contact .phone {
+  font-family: "Lekton";
+  color: #46b4b4;
+}
+
+.header .left-part {
+  padding: 2.1875rem 1.5625rem;
+  background-color: #f0d93e;
+}
+
+.header .menu-burger__icon > .soc-media__icon {
+  font-size: 24px;
+  color: #4bc7c7;
+  cursor: pointer;
+}
+
+.header #menu-checkbox {
+  display: none;
+}
+
+html {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+}
+
+header {
+  order: 1;
+}
+
+main {
+  flex-grow: 1;
+  order: 2;
+}
+
+footer {
+  order: 3;
+}
+
+.block {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.content {
+  flex-basis: 50%;
+}
+
+.media {
+  flex-basis: 50%;
+}
+
+.btn {
+  padding: 0.625rem 2.8125rem;
+  border: 1px solid #9a977a;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.soc-media__icon {
+  font-size: 16px;
+}
+
+.title {
+  font-size: 30px;
+  color: #303030;
+  line-height: 30px;
+}
+
+.heading {
+  font-size: 18px;
+  color: #848484;
+}
+
+.title,
+.heading {
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 16px;
+  color: #848484;
+}
+
+.nav-text {
+  font-size: 14px;
+  color: #848484;
+}
+
+.quote {
+  font-size: 24px;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 100%;
+}
+/*# sourceMappingURL=maps/main.css.map */
