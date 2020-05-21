@@ -169,83 +169,9 @@ footer {
   order: 3;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.container {
-  max-width: 100%;
-}
-
-.wrapper {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0.5rem;
-}
-
 .header .container {
   display: flex;
   flex-flow: row wrap;
-}
-
-.header .block {
-  flex-basis: 50%;
-}
-
-.header .block .inner {
-  padding: 3.75rem 4.6875rem;
-}
-
-.header .block .inner .content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8.4375rem;
-}
-
-.header .block .inner .content .logo {
-  margin-bottom: 10px;
-}
-
-.header .block .inner .content .title {
-  white-space: pre-line;
-  color: #46b4b4;
-}
-
-.header .block .inner .content .title::first-line {
-  color: #4eabab;
-}
-
-.header .block .inner .media {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.header .block .inner .media .soc-media {
-  display: flex;
-  flex-basis: 35%;
-  justify-content: space-between;
-}
-
-.header .block .inner .media .soc-media__icon {
-  color: #46b4b4;
-}
-
-.header .block .inner .media .contact {
-  display: flex;
-  flex-basis: 30%;
-  justify-content: space-between;
-}
-
-.header .block .inner .media .contact .phone {
-  font-family: "Lekton";
-  color: #46b4b4;
-}
-
-.header .left-part {
-  padding: 2.1875rem 1.5625rem;
-  background-color: #f0d93e;
 }
 
 .header .menu-burger__icon > .soc-media__icon {
@@ -254,30 +180,166 @@ html {
   cursor: pointer;
 }
 
+.header .menu-burger__icon > .soc-media__icon:hover {
+  color: #848484;
+  transition: all 0.3s ease;
+}
+
 .header #menu-checkbox {
   display: none;
+}
+
+.header #menu-checkbox:checked + .menu {
+  display: block;
+}
+
+.header .menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #60d4d4;
+  width: 100%;
+  height: 100%;
+}
+
+.header .menu .inner {
+  padding: 2.1875rem 1.5625rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.header .menu .inner .close {
+  color: #f0d93e;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.header .menu .inner .close:hover {
+  color: #fdeecf;
+}
+
+.header .menu__items {
+  display: flex;
+  flex-flow: row wrap;
+  padding-right: 6.25rem;
+}
+
+.header .menu__item {
+  padding: 0 0.625rem;
+  border-right: 1px solid #f0d93e;
+}
+
+.header .menu__item:last-child {
+  border: none;
+}
+
+.header .menu__link {
+  color: #f0d93e;
+  text-transform: uppercase;
+}
+
+.header .menu__link:hover {
+  color: #fdeecf;
+}
+
+.header .left-part {
+  position: relative;
+  padding: 2.1875rem 1.5625rem;
+  background-color: #f0d93e;
+  flex-basis: 50%;
+}
+
+.header .left-part .inner {
+  padding: 3.75rem 4.6875rem;
+  padding-bottom: 0.9375rem;
+}
+
+.header .left-part .inner .content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8.4375rem;
+}
+
+.header .left-part .inner .content .logo {
+  margin-bottom: 10px;
+}
+
+.header .left-part .inner .content .title {
+  white-space: pre-line;
+  color: #46b4b4;
+}
+
+.header .left-part .inner .content .title::first-line {
+  color: #4eabab;
+}
+
+.header .left-part .inner .media {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.header .left-part .inner .media .soc-media {
+  display: flex;
+  flex-basis: 35%;
+  justify-content: space-between;
+}
+
+.header .left-part .inner .media .soc-media__icon {
+  color: #46b4b4;
+}
+
+.header .left-part .inner .media .soc-media__icon:hover {
+  color: #848484;
+  transition: all 0.3s ease;
+}
+
+.header .left-part .inner .media .contact {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: space-between;
+}
+
+.header .left-part .inner .media .contact .phone {
+  font-family: "Lekton";
+  color: #46b4b4;
+}
+
+.header .left-part .inner .media .contact .phone:hover {
+  color: #848484;
+}
+
+.header .right-part {
+  background-image: linear-gradient(90deg, #dfd8c6 0%, #d2cab7 100%);
+  flex-basis: 50%;
+  padding: 7.5rem 13.4375rem 3.125rem 13.4375rem;
+}
+
+.header .right-part .content {
+  display: flex;
+  flex-flow: column wrap;
+  font-family: "Lekton";
+  text-transform: uppercase;
+}
+
+.header .right-part .content .details span {
+  color: #fdeecf;
+}
+
+.header .right-part .content .details .nav-text {
+  color: #fff;
+  line-height: 20px;
+}
+
+.header .right-part .content .btn__wrapper {
+  margin-top: 0.9375rem;
 }
 
 html {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-}
-
-body {
-  display: flex;
-}
-
-header {
-  order: 1;
-}
-
-main {
-  flex-grow: 1;
-  order: 2;
-}
-
-footer {
-  order: 3;
 }
 
 .block {
@@ -294,12 +356,17 @@ footer {
 }
 
 .btn {
-  padding: 0.625rem 2.8125rem;
+  padding: 0.1875rem 2.6875rem;
   border: 1px solid #9a977a;
   background: transparent;
   cursor: pointer;
   text-transform: uppercase;
   color: #fff;
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .soc-media__icon {
