@@ -469,4 +469,180 @@ html {
 .about-us .content .article .nav-text {
   color: #303030;
 }
+
+.team {
+  display: flex;
+  flex-flow: row wrap;
+  font-family: "Lekton";
+}
+
+.team .block {
+  flex-basis: 25%;
+  height: 31.25rem;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.team .block:nth-child(even) {
+  text-align: right;
+}
+
+.team .block:hover .front {
+  transform: rotateY(180deg);
+}
+
+.team .block:hover .back {
+  transform: rotateY(360deg);
+}
+
+.team .block .front .subtitle {
+  color: #000;
+}
+
+.team .block .front .nav-text {
+  color: #000;
+}
+
+.team .block .front .soc-media__icon {
+  color: #000;
+}
+
+.team .block .front .soc-media__icon:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.team .block .back {
+  transform: rotateY(180deg);
+}
+
+.team .block .back .subtitle {
+  color: #fff;
+}
+
+.team .block .back .nav-text {
+  color: #fff;
+}
+
+.team .block .back .soc-media__icon {
+  color: #fff;
+}
+
+.team .block .back .soc-media__icon:hover {
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.team .block .front,
+.team .block .back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  padding: 4.25rem 2.1875rem;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+
+.team .block .front .title,
+.team .block .back .title {
+  line-height: 24px;
+  margin-bottom: 0.625rem;
+  color: #60d4d4;
+}
+
+.team .block .front .subtitle,
+.team .block .back .subtitle {
+  text-transform: uppercase;
+  line-height: 24px;
+  margin-bottom: 0.3125rem;
+}
+
+.team .block .front .nav-text,
+.team .block .back .nav-text {
+  line-height: 14px;
+}
+
+.team .block .front .soc-media,
+.team .block .back .soc-media {
+  margin-top: 0.625rem;
+}
+
+.team .john .front {
+  background-image: url(../img/john_front.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .john .back {
+  background-image: url(../img/john_back.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .emma .front {
+  background-image: url(../img/emma_front.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .emma .back {
+  background-image: url(../img/emma_back.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .ron .front {
+  background-image: url(../img/ron_front.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .ron .back {
+  background-image: url(../img/ron_back.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .ron .back .nav-text {
+  color: #000;
+}
+
+.team .ron .back .soc-media__icon {
+  color: #000;
+}
+
+.team .ron .back .soc-media__icon:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.team .lara .front {
+  background-image: url(../img/lara_front.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .lara .back {
+  background-image: url(../img/lara_back.jpg);
+  background-size: cover;
+  background-position: top right;
+}
+
+.team .lara .back .nav-text {
+  color: #000;
+}
+
+.team .lara .back .soc-media__icon {
+  color: #000;
+}
+
+.team .lara .back .soc-media__icon:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+}
 /*# sourceMappingURL=maps/main.css.map */
