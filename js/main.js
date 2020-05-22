@@ -104,7 +104,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+var close = document.querySelector('.close');
+var menuCheckbox = document.querySelector('#menu-checkbox');
+close.addEventListener('click', function () {
+  menuCheckbox.checked = false;
+});
 
 /***/ }),
 
