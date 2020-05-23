@@ -645,4 +645,57 @@ html {
   color: #fff;
   transition: all 0.3s ease;
 }
+
+.process {
+  padding: 10.9375rem 5.3125rem 10.3125rem 5.3125rem;
+  line-height: 18px;
+  font-family: "Lekton";
+}
+
+.process .caption {
+  padding: 0 11.5625rem 8.4375rem 11.5625rem;
+  text-align: center;
+}
+
+.process .caption .title {
+  margin-bottom: 2.5rem;
+  font-weight: 100;
+}
+
+.process .caption .text {
+  text-transform: none;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.process .content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.process .content .block {
+  flex-basis: 25%;
+  text-align: center;
+  flex-flow: column wrap;
+  padding: 0 1.25rem;
+}
+
+.process .content .block .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  color: #46b4b4;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #46b4b4;
+  border-radius: 50%;
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.process .content .block .subtitle {
+  text-transform: uppercase;
+  margin-bottom: 0.9375rem;
+}
 /*# sourceMappingURL=maps/main.css.map */
