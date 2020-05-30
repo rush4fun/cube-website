@@ -141,6 +141,159 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 
+var cube = {
+  portfolio: [{
+    id: 1,
+    type: 'app',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 2,
+    type: 'web-design',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 3,
+    type: 'branding',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 4,
+    type: 'branding',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 5,
+    type: 'web-design',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 6,
+    type: 'app',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 7,
+    type: 'branding',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 8,
+    type: 'app',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 9,
+    type: 'app',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }, {
+    id: 10,
+    type: 'app',
+    client: 'David lee - Architect',
+    date: '2014',
+    skills: 'web design - identity',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: 'davidlee.arch',
+    img: []
+  }],
+  setting: function setting() {
+    var portfolioItem = document.querySelectorAll('.portfolio__item');
+    portfolioItem.forEach(function (item) {
+      for (var i = 0; i < cube.portfolio.length; i++) {
+        if (item.dataset.id == cube.portfolio[i].id) {
+          item.dataset.type = cube.portfolio[i].type;
+        }
+      }
+    });
+  },
+  navigation: function navigation() {
+    var portfolioNavigation = function portfolioNavigation() {
+      var portfolioLink = document.querySelectorAll('.nav-portfolio__link');
+      var portfolioItem = document.querySelectorAll('.portfolio__item');
+      portfolioLink.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          for (var i = 0; i < portfolioItem.length; i++) {
+            portfolioItem[i].style.display = 'none';
+
+            if (this.dataset.type == 'all') {
+              portfolioItem[i].style.display = 'flex';
+              var loadMoreBtn = document.querySelector('.js-loadMore');
+              loadMoreBtn.style.display = 'none';
+            }
+
+            if (this.dataset.type == portfolioItem[i].dataset.type) {
+              portfolioItem[i].style.display = 'flex';
+
+              var _loadMoreBtn = document.querySelector('.js-loadMore');
+
+              _loadMoreBtn.style.display = 'none';
+            }
+          }
+        });
+      });
+    };
+
+    portfolioNavigation();
+  },
+  loadMore: function loadMore() {
+    var loadMoreBtn = document.querySelector('.js-loadMore');
+    loadMoreBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      var portfolioItem = document.querySelectorAll('.portfolio__item');
+      portfolioItem.forEach(function (item) {
+        item.style.display = 'flex';
+        loadMoreBtn.style.display = 'none';
+      });
+    });
+  },
+  init: function init() {
+    this.setting();
+    this.loadMore();
+    this.navigation();
+  }
+};
+document.addEventListener('DOMContentLoaded', function () {
+  cube.init();
+});
 
 /***/ })
 
