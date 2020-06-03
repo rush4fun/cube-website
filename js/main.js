@@ -285,10 +285,12 @@ var cube = {
       });
     });
   },
+  openPortfolioCase: function openPortfolioCase() {},
   init: function init() {
     this.setting();
     this.loadMore();
     this.navigation();
+    this.openPortfoliocase();
   }
 };
 document.addEventListener('DOMContentLoaded', function () {
