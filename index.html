@@ -379,7 +379,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item e0d7cd" data-id="2">
@@ -394,7 +394,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item e3d3c8" data-id="3">
@@ -409,7 +409,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item dbdbd3" data-id="4">
@@ -424,7 +424,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item e6e6e6" data-id="5">
@@ -439,7 +439,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item portfolio__item--big c-513c4b" data-id="6">
@@ -454,7 +454,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item portfolio__item--big d6f0ed" data-id="7">
@@ -469,7 +469,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item f2eed4" data-id="8">
@@ -484,7 +484,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item f0d93e" data-id="9">
@@ -499,7 +499,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                     <div class="portfolio__item f0d93e" data-id="10">
@@ -514,7 +514,7 @@
                                 <p class="nav-text"><span>client: </span>esquire</p>
                                 <p class="nav-text"><span>datE: </span>2014</p>
                             </div>
-                            <a href="#" class="btn">view</a>
+                            <a href="#" class="btn js-openPopUp">view</a>
                         </div>
                     </div>
                 </div>
@@ -624,50 +624,58 @@
     <div id="popup">
         <div class="wrapper">
             <div class="inner">
-                <span class="close">
+                <span class="close js-closePopUp">
                     <i class="fas fa-times"></i>
                 </span>
                 <div class="popupbody">
                     <div class="media">
                         <figure class="popup__img">
                             <div class="picture__wrapper">
-                                <img src="" alt="" class="picture">
+                                <img src="" alt="" class="js-picture">
                             </div>
                             <div class="navigations">
-                                <a href="#" class="left-arrow"><i class="fas fa-angle-left"></i></a>
-                                <a href="#" class="right-arrow"><i class="fas fa-angle-right"></i></a>
+                                <a href="#" class="left-arrow">
+                                    < </a>
+                                        <a href="#" class="right-arrow">></a>
                             </div>
-                            <div>
-                                <span class="count"></span>
+                            <div class="count__wrapper">
+                                <span class="nav-text count">1/15</span>
                             </div>
-                            <figcaption>
-                                <a href="#" class="popup__links"><i class="fas fa-heart"></i></a>
-                                <a href="#" class="popup__links"><i class="fas fa-share"></i></a>
-                                <a href="#" class="popup__links"><i class="fas fa-envelope"></i></a>
+                            <figcaption class="reaction">
+                                <a href="#" class="reaction__links"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="reaction__links"><i class="fas fa-share"></i></a>
+                                <a href="#" class="reaction__links"><i class="fas fa-envelope"></i></a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="content">
-                        <p class="nav-text content__main"><span>client:</span>David lee - Architect</p>
-                        <p class="nav-text content__main"><span>datE:</span>2014</p>
-                        <p class="nav-text content__main"><span>skills:</span>web design - identity</p>
-                        <p class="nav-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente neque
-                            est,
-                            explicabo animi blanditiis quam velit ducimus incidunt ab doloremque.</p>
-                        <p class="nav-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim autem
-                            voluptatibus
-                            fuga commodi perferendis nemo perspiciatis inventore unde maxime, quae architecto
-                            exercitationem
-                            maiores vel officiis tenetur sequi quia. Laborum perspiciatis blanditiis magnam sunt ab!
-                            Sunt
-                            molestiae, magnam eos deleniti libero nostrum odio obcaecati quasi alias cupiditate ullam
-                            fuga
-                            autem.</p>
-                        <p class="nav-text content__main"><span>site:</span>davidlee.arch</p>
+                        <p class="nav-text content__main js-popUpCleint"><span>client: </span>David lee - Architect</p>
+                        <p class="nav-text content__main js-popUpDate"><span>datE: </span>2014</p>
+                        <p class="nav-text content__main js-popUpSkills"><span>skills: </span>web design - identity</p>
+                        <div class="content__text">
+                            <p class="nav-text js-popUpText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sapiente neque
+                                est,
+                                explicabo animi blanditiis quam velit ducimus incidunt ab doloremque.
+                                <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+                                enim autem
+                                voluptatibus
+                                fuga commodi perferendis nemo perspiciatis inventore unde maxime, quae architecto
+                                exercitationem
+                                maiores vel officiis tenetur sequi quia. Laborum perspiciatis blanditiis magnam sunt ab!
+                                Sunt
+                                molestiae, magnam eos deleniti libero nostrum odio obcaecati quasi alias cupiditate
+                                ullam
+                                fuga
+                                autem.</p>
+                        </div>
+                        <a href="#" class="nav-text content__main js-popUpSite"><span>site: </span>davidlee.arch</a>
                     </div>
                     <nav class="nav">
-                        <a href="#" class="nav__li nav-text">next project<i class="fas fa-chevron-right"></i></a>
-                        <a href="#" class="nav__li nav-text"><i class="fas fa-chevron-left"></i>previous project</a>
+                        <a href="#" class="nav__li nav-text">next project ></a>
+                        <a href="#" class="nav__li nav-text">
+                            < previous project</a>
                     </nav>
                 </div>
             </div>

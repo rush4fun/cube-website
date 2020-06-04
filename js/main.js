@@ -145,92 +145,92 @@ var cube = {
   portfolio: [{
     id: 1,
     type: 'app',
-    client: 'David lee - Architect',
+    client: 'David lee1 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
-    img: []
+    text: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '1davidlee.arch',
+    img: ['img/emma_back.jpg', 'img/emma_front.jpg']
   }, {
     id: 2,
     type: 'web-design',
-    client: 'David lee - Architect',
+    client: 'David lee2 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
-    img: []
+    text: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '2davidlee.arch',
+    img: ['img/john_back.jpg', 'img/john_front.jpg']
   }, {
     id: 3,
     type: 'branding',
-    client: 'David lee - Architect',
+    client: 'David lee3 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '3davidlee.arch',
     img: []
   }, {
     id: 4,
     type: 'branding',
-    client: 'David lee - Architect',
+    client: 'David lee4 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '4davidlee.arch',
     img: []
   }, {
     id: 5,
     type: 'web-design',
-    client: 'David lee - Architect',
+    client: 'David lee5 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '5davidlee.arch',
     img: []
   }, {
     id: 6,
     type: 'app',
-    client: 'David lee - Architect',
+    client: 'David lee6 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '6Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '6davidlee.arch',
     img: []
   }, {
     id: 7,
     type: 'branding',
-    client: 'David lee - Architect',
+    client: 'David lee7 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '7Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '7davidlee.arch',
     img: []
   }, {
     id: 8,
     type: 'app',
-    client: 'David lee - Architect',
+    client: 'David lee8 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '8Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '8davidlee.arch',
     img: []
   }, {
     id: 9,
     type: 'app',
-    client: 'David lee - Architect',
+    client: 'David lee9 - Architect',
     date: '2014',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '9Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '9davidlee.arch',
     img: []
   }, {
     id: 10,
     type: 'app',
-    client: 'David lee - Architect',
-    date: '2014',
+    client: 'David lee10 - Architect',
+    date: '2010',
     skills: 'web design - identity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
-    site: 'davidlee.arch',
+    text: '10Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
+    site: '10davidlee.arch',
     img: []
   }],
   setting: function setting() {
@@ -285,12 +285,80 @@ var cube = {
       });
     });
   },
-  openPortfolioCase: function openPortfolioCase() {},
+  openPortfolioCase: {
+    openPopUp: function openPopUp() {
+      var portfolioItem = document.querySelectorAll('.js-openPopUp');
+      var popUp = document.querySelector('#popup');
+
+      var loadPopUpContent = function loadPopUpContent(curId) {
+        for (var i = 0; i < cube.portfolio.length; i++) {
+          if (cube.portfolio[i].id == curId) {
+            var loadPicturePopUp = function loadPicturePopUp(index) {
+              var picturePopUp = document.querySelector('.js-picture');
+              picturePopUp.src = cube.portfolio[index].img[0];
+            };
+
+            var loadClientPopUp = function loadClientPopUp(index) {
+              var clientPopUp = document.querySelector('.js-popUpCleint');
+              clientPopUp.lastChild.textContent = cube.portfolio[index].client;
+            };
+
+            var loadDatePopUp = function loadDatePopUp(index) {
+              var datePopUp = document.querySelector('.js-popUpDate');
+              datePopUp.lastChild.textContent = cube.portfolio[index].date;
+            };
+
+            var loadSkillsPopUp = function loadSkillsPopUp(index) {
+              var skillsPopUp = document.querySelector('.js-popUpSkills');
+              skillsPopUp.lastChild.textContent = cube.portfolio[index].skills;
+            };
+
+            var loadTextPopUp = function loadTextPopUp(index) {
+              var textPopUp = document.querySelector('.js-popUpText');
+              textPopUp.innerHTML = cube.portfolio[index].text;
+            };
+
+            var loadSitePopUp = function loadSitePopUp(index) {
+              var sitePopUp = document.querySelector('.js-popUpSite');
+              sitePopUp.lastChild.textContent = cube.portfolio[index].site;
+            };
+
+            loadSitePopUp(i);
+            loadTextPopUp(i);
+            loadSkillsPopUp(i);
+            loadDatePopUp(i);
+            loadClientPopUp(i);
+            loadPicturePopUp(i);
+          }
+        }
+      };
+
+      portfolioItem.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+          event.preventDefault();
+          popUp.style.display = 'block';
+          var currentId = this.closest('.portfolio__item').dataset.id;
+          loadPopUpContent(currentId);
+        });
+      });
+    },
+    closePopUp: function closePopUp() {
+      var close = document.querySelector('.js-closePopUp');
+      var popUp = document.querySelector('#popup');
+      close.addEventListener('click', function () {
+        popUp.style.display = 'none';
+      });
+    },
+    init: function init() {
+      this.openPopUp();
+      this.closePopUp();
+    }
+  },
   init: function init() {
     this.setting();
     this.loadMore();
     this.navigation();
-    this.openPortfoliocase();
+    this.openPortfolioCase.init();
   }
 };
 document.addEventListener('DOMContentLoaded', function () {

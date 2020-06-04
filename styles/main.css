@@ -885,10 +885,13 @@ html {
 }
 
 #popup {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 2;
 }
 
@@ -923,11 +926,13 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: #e6e6e6;
 }
 
 #popup .inner .popupbody .media .popup__img .picture__wrapper {
   flex-grow: 1;
-  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
 }
 
 #popup .inner .popupbody .media .navigations {
@@ -935,17 +940,90 @@ html {
   width: 10%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.9375rem;
 }
 
 #popup .inner .popupbody .media .navigations a {
   color: #000;
+  transition: all 0.3s ease;
+}
+
+#popup .inner .popupbody .media .navigations a:hover {
+  color: #848484;
+}
+
+#popup .inner .popupbody .media .count__wrapper {
+  text-align: center;
+}
+
+#popup .inner .popupbody .media .count__wrapper .count {
+  font-family: "Lekton Italic";
+  font-weight: 900;
+  color: #362f2f;
+}
+
+#popup .inner .popupbody .media .reaction {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 3.125rem;
+}
+
+#popup .inner .popupbody .media .reaction__links {
+  color: #46b4b4;
+  transition: all 0.3s ease;
+}
+
+#popup .inner .popupbody .media .reaction__links:hover {
+  color: #848484;
 }
 
 #popup .inner .popupbody .content {
-  flex-basis: 20%;
+  flex-basis: 23%;
+  background-color: #60d4d4;
+  padding: 5.625rem 1.25rem 1.25rem 1.25rem;
+  font-family: "Lekton";
+}
+
+#popup .inner .popupbody .content__main {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.9375rem;
+}
+
+#popup .inner .popupbody .content__main span {
+  color: #fdeecf;
+  cursor: text;
+}
+
+#popup .inner .popupbody .content__text {
+  line-height: 14px;
+  margin-bottom: 4.375rem;
+}
+
+#popup .inner .popupbody .content__text p {
+  color: #362f2f;
+  white-space: pre-line;
 }
 
 #popup .inner .popupbody .nav {
-  flex-basis: 20%;
+  flex-basis: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup .inner .popupbody .nav__li {
+  font-family: "Lekton";
+  text-transform: uppercase;
+  color: #46b4b4;
+  margin-bottom: 0.625rem;
+  transition: all 0.3s ease;
+}
+
+#popup .inner .popupbody .nav__li:hover {
+  color: #848484;
 }
 /*# sourceMappingURL=maps/main.css.map */
