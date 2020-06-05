@@ -286,72 +286,117 @@ var cube = {
     });
   },
   openPortfolioCase: {
+    popUp: document.querySelector('#popup'),
+    loadPopUpContent: function loadPopUpContent(curId) {
+      for (var i = 0; i < cube.portfolio.length; i++) {
+        if (cube.portfolio[i].id == curId) {
+          var loadPicturePopUp = function loadPicturePopUp(index) {
+            var loadPicture = function loadPicture(currStep) {
+              var picturePopUp = document.querySelector('.js-picture');
+              picturePopUp.src = cube.portfolio[index].img[currStep];
+            };
+
+            var step = 0;
+            loadPicture(step);
+
+            var countPictures = function countPictures() {
+              var currentPicIndex = document.querySelector('.js-popUpCurrentPicIndex');
+              var picLenght = document.querySelector('.js-popUpPicLenght');
+
+              if (cube.portfolio[index].img.length != 0) {
+                currentPicIndex.innerHTML = step + 1;
+              } else {
+                currentPicIndex.innerHTML = step;
+              }
+
+              picLenght.innerHTML = cube.portfolio[index].img.length;
+            };
+
+            countPictures();
+            var prevPic = document.querySelector('.js-popUpPrevPic');
+            var nextPic = document.querySelector('.js-popUpNextPic');
+            nextPic.addEventListener('click', function () {
+              if (step < cube.portfolio[index].img.length - 1) {
+                step++;
+                loadPicture(step);
+                countPictures();
+              }
+
+              ;
+            });
+            prevPic.addEventListener('click', function () {
+              if (step > 0) {
+                step--;
+                loadPicture(step);
+                countPictures();
+              }
+            });
+          };
+
+          var loadClientPopUp = function loadClientPopUp(index) {
+            var clientPopUp = document.querySelector('.js-popUpCleint');
+            clientPopUp.lastChild.textContent = cube.portfolio[index].client;
+          };
+
+          var loadDatePopUp = function loadDatePopUp(index) {
+            var datePopUp = document.querySelector('.js-popUpDate');
+            datePopUp.lastChild.textContent = cube.portfolio[index].date;
+          };
+
+          var loadSkillsPopUp = function loadSkillsPopUp(index) {
+            var skillsPopUp = document.querySelector('.js-popUpSkills');
+            skillsPopUp.lastChild.textContent = cube.portfolio[index].skills;
+          };
+
+          var loadTextPopUp = function loadTextPopUp(index) {
+            var textPopUp = document.querySelector('.js-popUpText');
+            textPopUp.innerHTML = cube.portfolio[index].text;
+          };
+
+          var loadSitePopUp = function loadSitePopUp(index) {
+            var sitePopUp = document.querySelector('.js-popUpSite');
+            sitePopUp.lastChild.textContent = cube.portfolio[index].site;
+          };
+
+          loadSitePopUp(i);
+          loadTextPopUp(i);
+          loadSkillsPopUp(i);
+          loadDatePopUp(i);
+          loadClientPopUp(i);
+          loadPicturePopUp(i);
+        }
+      }
+    },
     openPopUp: function openPopUp() {
       var portfolioItem = document.querySelectorAll('.js-openPopUp');
-      var popUp = document.querySelector('#popup');
-
-      var loadPopUpContent = function loadPopUpContent(curId) {
-        for (var i = 0; i < cube.portfolio.length; i++) {
-          if (cube.portfolio[i].id == curId) {
-            var loadPicturePopUp = function loadPicturePopUp(index) {
-              var picturePopUp = document.querySelector('.js-picture');
-              picturePopUp.src = cube.portfolio[index].img[0];
-            };
-
-            var loadClientPopUp = function loadClientPopUp(index) {
-              var clientPopUp = document.querySelector('.js-popUpCleint');
-              clientPopUp.lastChild.textContent = cube.portfolio[index].client;
-            };
-
-            var loadDatePopUp = function loadDatePopUp(index) {
-              var datePopUp = document.querySelector('.js-popUpDate');
-              datePopUp.lastChild.textContent = cube.portfolio[index].date;
-            };
-
-            var loadSkillsPopUp = function loadSkillsPopUp(index) {
-              var skillsPopUp = document.querySelector('.js-popUpSkills');
-              skillsPopUp.lastChild.textContent = cube.portfolio[index].skills;
-            };
-
-            var loadTextPopUp = function loadTextPopUp(index) {
-              var textPopUp = document.querySelector('.js-popUpText');
-              textPopUp.innerHTML = cube.portfolio[index].text;
-            };
-
-            var loadSitePopUp = function loadSitePopUp(index) {
-              var sitePopUp = document.querySelector('.js-popUpSite');
-              sitePopUp.lastChild.textContent = cube.portfolio[index].site;
-            };
-
-            loadSitePopUp(i);
-            loadTextPopUp(i);
-            loadSkillsPopUp(i);
-            loadDatePopUp(i);
-            loadClientPopUp(i);
-            loadPicturePopUp(i);
-          }
-        }
-      };
-
       portfolioItem.forEach(function (item) {
         item.addEventListener('click', function (event) {
           event.preventDefault();
-          popUp.style.display = 'block';
+          cube.openPortfolioCase.popUp.style.display = 'block';
           var currentId = this.closest('.portfolio__item').dataset.id;
-          loadPopUpContent(currentId);
+          cube.openPortfolioCase.popUp.dataset.id = currentId;
+          cube.openPortfolioCase.loadPopUpContent(currentId);
         });
       });
     },
     closePopUp: function closePopUp() {
       var close = document.querySelector('.js-closePopUp');
-      var popUp = document.querySelector('#popup');
       close.addEventListener('click', function () {
-        popUp.style.display = 'none';
+        cube.openPortfolioCase.popUp.style.display = 'none';
+      });
+    },
+    navigationProjects: function navigationProjects() {
+      var nextProject = document.querySelector('.js-popUpNexProject');
+      var currentId = cube.openPortfolioCase.popUp.dataset.id;
+      nextProject.addEventListener('click', function (event) {
+        event.preventDefault();
+        cube.openPortfolioCase.loadPopUpContent(currentId);
       });
     },
     init: function init() {
       this.openPopUp();
       this.closePopUp();
+      this.navigationProjects();
     }
   },
   init: function init() {

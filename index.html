@@ -356,7 +356,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio">
+            <div class="portfolio" id="portfolio">
                 <h2 class="title">portfolio</h2>
                 <nav class="nav-portfolio">
                     <a href="#" class="nav-portfolio__link text" data-type="all">ALL</a>
@@ -624,9 +624,9 @@
     <div id="popup">
         <div class="wrapper">
             <div class="inner">
-                <span class="close js-closePopUp">
+                <a href="#portfolio" class="close js-closePopUp">
                     <i class="fas fa-times"></i>
-                </span>
+                </a>
                 <div class="popupbody">
                     <div class="media">
                         <figure class="popup__img">
@@ -634,12 +634,13 @@
                                 <img src="" alt="" class="js-picture">
                             </div>
                             <div class="navigations">
-                                <a href="#" class="left-arrow">
+                                <a href="#" class="left-arrow js-popUpPrevPic">
                                     < </a>
-                                        <a href="#" class="right-arrow">></a>
+                                        <a href="#" class="right-arrow js-popUpNextPic">></a>
                             </div>
                             <div class="count__wrapper">
-                                <span class="nav-text count">1/15</span>
+                                <span class="nav-text count"><span class="js-popUpCurrentPicIndex">1</span>/<span
+                                        class="js-popUpPicLenght">15</span></span>
                             </div>
                             <figcaption class="reaction">
                                 <a href="#" class="reaction__links"><i class="fas fa-heart"></i></a>
@@ -673,7 +674,7 @@
                         <a href="#" class="nav-text content__main js-popUpSite"><span>site: </span>davidlee.arch</a>
                     </div>
                     <nav class="nav">
-                        <a href="#" class="nav__li nav-text">next project ></a>
+                        <a href="#" class="nav__li nav-text js-popUpNexProject">next project ></a>
                         <a href="#" class="nav__li nav-text">
                             < previous project</a>
                     </nav>
