@@ -386,11 +386,31 @@ var cube = {
       });
     },
     navigationProjects: function navigationProjects() {
-      var nextProject = document.querySelector('.js-popUpNexProject');
-      var currentId = cube.openPortfolioCase.popUp.dataset.id;
+      var nextProject = document.querySelector('.js-popUpNextProject');
       nextProject.addEventListener('click', function (event) {
         event.preventDefault();
-        cube.openPortfolioCase.loadPopUpContent(currentId);
+        var popUpCurrentId = cube.openPortfolioCase.popUp.dataset.id;
+
+        if (popUpCurrentId != cube.portfolio[cube.portfolio.length - 1].id) {
+          var nextPopUpId = ++popUpCurrentId;
+          cube.openPortfolioCase.popUp.dataset.id = nextPopUpId;
+          cube.openPortfolioCase.loadPopUpContent(nextPopUpId);
+        }
+
+        ;
+      });
+      var prevProject = document.querySelector('.js-popUpPrevProject');
+      prevProject.addEventListener('click', function (event) {
+        event.preventDefault();
+        var popUpCurrentId = cube.openPortfolioCase.popUp.dataset.id;
+
+        if (popUpCurrentId > 1) {
+          var prevPopUpId = --popUpCurrentId;
+          cube.openPortfolioCase.popUp.dataset.id = prevPopUpId;
+          cube.openPortfolioCase.loadPopUpContent(prevPopUpId);
+        }
+
+        ;
       });
     },
     init: function init() {
