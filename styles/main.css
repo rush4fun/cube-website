@@ -884,6 +884,37 @@ html {
   color: #46b4b4;
 }
 
+.stats {
+  padding: 3.4375rem 0 7.5rem 0;
+  background-color: #f3f2f2;
+  font-family: "Oswald";
+}
+
+.stats .title {
+  color: #60d4d4;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 4.375rem;
+}
+
+.stats__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.stats__inner .block {
+  text-align: center;
+}
+
+.stats__inner .block .media {
+  margin-bottom: 3.125rem;
+}
+
+.stats__inner .block .content .text {
+  color: #60d4d4;
+}
+
 #popup {
   display: none;
   position: fixed;
