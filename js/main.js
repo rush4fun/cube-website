@@ -150,7 +150,8 @@ var cube = {
     skills: 'web design - identity',
     text: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '1davidlee.arch',
-    img: ['img/emma_back.jpg', 'img/emma_front.jpg']
+    img: ['img/emma_back.jpg', 'img/emma_front.jpg'],
+    like: true
   }, {
     id: 2,
     type: 'web-design',
@@ -159,7 +160,8 @@ var cube = {
     skills: 'web design - identity',
     text: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '2davidlee.arch',
-    img: ['img/john_back.jpg', 'img/john_front.jpg']
+    img: ['img/john_back.jpg', 'img/john_front.jpg'],
+    like: false
   }, {
     id: 3,
     type: 'branding',
@@ -168,7 +170,8 @@ var cube = {
     skills: 'web design - identity',
     text: '3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '3davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 4,
     type: 'branding',
@@ -177,7 +180,8 @@ var cube = {
     skills: 'web design - identity',
     text: '4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '4davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 5,
     type: 'web-design',
@@ -186,7 +190,8 @@ var cube = {
     skills: 'web design - identity',
     text: '5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '5davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 6,
     type: 'app',
@@ -195,7 +200,8 @@ var cube = {
     skills: 'web design - identity',
     text: '6Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '6davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 7,
     type: 'branding',
@@ -204,7 +210,8 @@ var cube = {
     skills: 'web design - identity',
     text: '7Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '7davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 8,
     type: 'app',
@@ -213,7 +220,8 @@ var cube = {
     skills: 'web design - identity',
     text: '8Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '8davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 9,
     type: 'app',
@@ -222,7 +230,8 @@ var cube = {
     skills: 'web design - identity',
     text: '9Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '9davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }, {
     id: 10,
     type: 'app',
@@ -231,7 +240,8 @@ var cube = {
     skills: 'web design - identity',
     text: '10Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.',
     site: '10davidlee.arch',
-    img: []
+    img: [],
+    like: false
   }],
   setting: function setting() {
     var portfolioItem = document.querySelectorAll('.portfolio__item');
@@ -358,12 +368,35 @@ var cube = {
             sitePopUp.lastChild.textContent = cube.portfolio[index].site;
           };
 
+          var loadLikes = function loadLikes(index) {
+            var popUpLike = document.querySelector('.js-like');
+
+            if (cube.portfolio[index].like == false) {
+              popUpLike.classList.remove('like--red');
+            } else if (cube.portfolio[index].like == true) {
+              popUpLike.classList.add('like--red');
+            }
+
+            popUpLike.addEventListener('click', function () {
+              var currId = cube.openPortfolioCase.popUp.dataset.id - 1;
+
+              if (cube.portfolio[currId].like == false) {
+                popUpLike.classList.add('like--red');
+                cube.portfolio[index].like = true;
+              } else if (cube.portfolio[currId].like == true) {
+                popUpLike.classList.remove('like--red');
+                cube.portfolio[index].like = false;
+              }
+            });
+          };
+
           loadSitePopUp(i);
           loadTextPopUp(i);
           loadSkillsPopUp(i);
           loadDatePopUp(i);
           loadClientPopUp(i);
           loadPicturePopUp(i);
+          loadLikes(i);
         }
       }
     },

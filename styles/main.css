@@ -979,6 +979,10 @@ html {
   color: #848484;
 }
 
+#popup .inner .popupbody .media .reaction .like--red {
+  color: #fe0000;
+}
+
 #popup .inner .popupbody .content {
   flex-basis: 23%;
   background-color: #60d4d4;
