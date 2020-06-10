@@ -913,6 +913,88 @@ html {
 
 .stats__inner .block .content .text {
   color: #60d4d4;
+  text-transform: uppercase;
+}
+
+.blog {
+  padding: 11.5625rem 5rem;
+}
+
+.blog .title {
+  font-family: "Oswald";
+  text-align: center;
+}
+
+.blog .inner {
+  font-family: "Lekton";
+  padding-top: 6.25rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.blog .inner .block {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21.25rem;
+  padding: 0 0.9375rem;
+  overflow: hidden;
+}
+
+.blog .inner .block .media {
+  background-color: #8ddbcb;
+  flex-basis: 50%;
+}
+
+.blog .inner .block .content__title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #303030;
+  text-transform: uppercase;
+}
+
+.blog .inner .block .content__text {
+  height: 4.375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.blog .inner .block .content__footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 0.625rem;
+}
+
+.blog .inner .block .content__footer .author {
+  color: #60d4d4;
+}
+
+.blog .inner .block .content__footer .author span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog .inner .block .content__footer .link {
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.blog .inner .block .content__footer .link:hover {
+  color: #303030;
+}
+
+.blog .inner .block--wide {
+  flex-basis: 50%;
+}
+
+.blog .inner .block--wide .media {
+  background-color: #f3f2f2;
 }
 
 #popup {
