@@ -997,6 +997,48 @@ html {
   background-color: #f3f2f2;
 }
 
+.clients {
+  padding: 4.6875rem 0;
+  background-color: #f2f2f2;
+}
+
+.clients .slider {
+  padding: 3.125rem 0 5rem 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.clients .slider .client {
+  flex-basis: 20%;
+  padding: 0 2.5rem;
+}
+
+.clients .navigator {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.clients .navigator .navigator__link {
+  width: 14px;
+  height: 14px;
+  background-color: #97c2be;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.clients .navigator .navigator__link:hover {
+  background-color: #60d4d4;
+}
+
+.clients .navigator .navigator__link--active {
+  background-color: #60d4d4;
+  cursor: auto;
+}
+
 #popup {
   display: none;
   position: fixed;
