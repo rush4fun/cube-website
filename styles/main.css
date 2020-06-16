@@ -1,5 +1,7 @@
 /* @include adaptiv-font(40, 16); */
 
+@import url(import/swiper.min.css);
+
 html,
 body,
 div,
@@ -1002,25 +1004,23 @@ html {
   background-color: #f2f2f2;
 }
 
-.clients .slider {
+.clients .slider-slick {
   padding: 3.125rem 0 5rem 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
 }
 
-.clients .slider .client {
-  flex-basis: 20%;
-  padding: 0 2.5rem;
-}
-
-.clients .navigator {
+.clients .slider-slick .client {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
 }
 
-.clients .navigator .navigator__link {
+.clients .swiper-pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 98%;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
   background-color: #97c2be;
@@ -1030,13 +1030,12 @@ html {
   margin-right: 10px;
 }
 
-.clients .navigator .navigator__link:hover {
+.clients .swiper-pagination .swiper-pagination-bullet:hover {
   background-color: #60d4d4;
 }
 
-.clients .navigator .navigator__link--active {
+.clients .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #60d4d4;
-  cursor: auto;
 }
 
 #popup {
