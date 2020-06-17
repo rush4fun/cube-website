@@ -1038,6 +1038,64 @@ html {
   background-color: #60d4d4;
 }
 
+.twitter {
+  padding: 11.875rem 0;
+  font-family: "Lekton Italic";
+}
+
+.twitter .post {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.twitter .post .icon {
+  color: #60d4d4;
+  font-size: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.twitter .post .quote {
+  color: #686868;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 0.625rem;
+}
+
+.twitter .post .quote a {
+  color: #6cc5d9;
+}
+
+.twitter .post .time {
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  font-size: 0.75rem;
+  color: #f48258;
+  font-family: "Lekton";
+  font-weight: 700;
+}
+
+.twitter .post .time::before {
+  content: "";
+  width: 1.6875rem;
+  height: 1px;
+  background-color: #f2f2f2;
+  margin-right: 3px;
+}
+
+.twitter .post .time::after {
+  content: "";
+  width: 35%;
+  height: 1px;
+  background-color: #f2f2f2;
+  margin-left: 3px;
+}
+
 #popup {
   display: none;
   position: fixed;
