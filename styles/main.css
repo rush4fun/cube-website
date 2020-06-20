@@ -1096,37 +1096,37 @@ html {
   margin-left: 3px;
 }
 
-.footer {
+.footer .inner {
   display: flex;
   flex-flow: row wrap;
 }
 
-.footer .contact-form {
+.footer .inner .contact-form {
   flex-basis: 50%;
   padding: 3.125rem 5.3125rem;
   background-image: linear-gradient(90deg, #dfd8c6 0%, #d2cab7 100%);
   font-family: "Lekton";
 }
 
-.footer .contact-form .quote {
+.footer .inner .contact-form .quote {
   text-transform: uppercase;
   color: #646250;
 }
 
-.footer .contact-form .text {
+.footer .inner .contact-form .text {
   font-size: 0.75rem;
   text-transform: uppercase;
   line-height: 14px;
   color: #646250;
 }
 
-.footer .contact-form .form {
+.footer .inner .contact-form .form {
   padding: 2.8125rem 3.125rem 0 3.125rem;
   display: flex;
   flex-flow: column wrap;
 }
 
-.footer .contact-form .form__input {
+.footer .inner .contact-form .form__input {
   padding: 0.3125rem 0;
   color: #a6a385;
   border: none;
@@ -1136,20 +1136,20 @@ html {
   margin-bottom: 1.875rem;
 }
 
-.footer .contact-form .form .btn {
+.footer .inner .contact-form .form .btn {
   padding: 0.9375rem 2.8125rem;
 }
 
-.footer .contact-form .form .btn:hover {
+.footer .inner .contact-form .form .btn:hover {
   background-color: #fff;
   color: #9a977a;
 }
 
-.footer .contact-form .form .btn__wrapper {
+.footer .inner .contact-form .form .btn__wrapper {
   padding-top: 1.25rem;
 }
 
-.footer .contacts {
+.footer .inner .contacts {
   display: flex;
   flex-direction: column;
   background-color: #f0d93e;
@@ -1157,25 +1157,25 @@ html {
   flex-basis: 50%;
 }
 
-.footer .contacts .inner {
+.footer .inner .contacts .content {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 5rem;
 }
 
-.footer .contacts .inner .company-name .title {
+.footer .inner .contacts .content .company-name .title {
   font-size: 1.5rem;
   color: #4eabab;
 }
 
-.footer .contacts .inner .address {
+.footer .inner .contacts .content .address {
   display: flex;
   flex-flow: column wrap;
   font-family: "Lekton";
 }
 
-.footer .contacts .inner .address .text {
+.footer .inner .contacts .content .address .text {
   white-space: pre-line;
   font-size: 0.8125rem;
   line-height: 14px;
@@ -1183,37 +1183,51 @@ html {
   text-transform: uppercase;
 }
 
-.footer .contacts .inner .address .text:first-child {
+.footer .inner .contacts .content .address .text:first-child {
   margin-bottom: 0.9375rem;
 }
 
-.footer .contacts .inner .address .mail {
+.footer .inner .contacts .content .address .mail {
   color: #60d4d4;
 }
 
-.footer .contacts .inner .address .mail:hover {
-  color: #fff;
+.footer .inner .contacts .content .address .mail:hover {
+  color: #000;
 }
 
-.footer .contacts .media {
+.footer .inner .contacts .media {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-bottom: 6.25rem;
 }
 
-.footer .contacts .media .soc-media {
+.footer .inner .contacts .media .soc-media {
   display: flex;
   flex-basis: 35%;
   justify-content: space-between;
 }
 
-.footer .contacts .media .soc-media__icon {
+.footer .inner .contacts .media .soc-media__icon {
   color: #46b4b4;
 }
 
-.footer .contacts .media .soc-media__icon:hover {
-  color: #fff;
+.footer .inner .contacts .media .soc-media__icon:hover {
+  color: #000;
   transition: all 0.3s ease;
+}
+
+.footer .inner .contacts .copyright {
+  width: 63%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer .inner .contacts .copyright .text {
+  font-family: "Lekton";
+  font-size: 0.8125rem;
+  color: #000;
+  line-height: 24px;
 }
 
 #popup {
