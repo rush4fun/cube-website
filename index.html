@@ -33,7 +33,7 @@
 <body>
     <main class="main">
         <div class="wrapper">
-            <div class="about-us">
+            <div class="about-us" id="about-us">
                 <div class="caption">
                     <h2 class="title">about us</h2>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus
@@ -526,7 +526,10 @@
                 <div class="stats__inner">
                     <div class="block">
                         <div class="media">
-                            <img src="img/pizza.png" alt="Pizza">
+                            <picture>
+                                <source srcset="img/pizza.webp 1x, img/pizza@2.webp 2x" type="image/webp">
+                                <img src="img/pizza.png" srcset="img/pizza@2.png 2x" alt="Pizza">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">94 pizze</p>
@@ -534,7 +537,10 @@
                     </div>
                     <div class="block">
                         <div class="media">
-                            <img src="img/books.png" alt="Books">
+                            <picture>
+                                <source srcset="img/books.webp 1x, img/books@2.webp 2x" type="image/webp">
+                                <img src="img/books.png" srcset="img/books@2.png 2x" alt="Books">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">187 books</p>
@@ -542,7 +548,10 @@
                     </div>
                     <div class="block">
                         <div class="media">
-                            <img src="img/nap.png" alt="Nap">
+                            <picture>
+                                <source srcset="img/nap.webp 1x, img/nap@2.webp 2x" type="image/webp">
+                                <img src="img/nap.png" srcset="img/nap@2.png 2x" alt="Nap">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">476 nap</p>
@@ -550,7 +559,10 @@
                     </div>
                     <div class="block">
                         <div class="media">
-                            <img src="img/clients.png" alt="Clients">
+                            <picture>
+                                <source srcset="img/clients.webp 1x, img/clients@2.webp 2x" type="image/webp">
+                                <img src="img/clients.png" srcset="img/clients@2.png 2x" alt="Clients">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">37 clients</p>
@@ -558,7 +570,10 @@
                     </div>
                     <div class="block">
                         <div class="media">
-                            <img src="img/coffee.png" alt="Coffee">
+                            <picture>
+                                <source srcset="img/coffee.webp 1x, img/coffee@2.webp 2x" type="image/webp">
+                                <img src="img/coffee.png" srcset="img/coffee@2.png 2x" alt="Coffee">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">575 coffee</p>
@@ -566,7 +581,10 @@
                     </div>
                     <div class="block">
                         <div class="media">
-                            <img src="img/dog.png" alt="Dog">
+                            <picture>
+                                <source srcset="img/dog.webp 1x, img/dog@2.webp 2x" type="image/webp">
+                                <img src="img/dog.png" srcset="img/dog@2.png 2x" alt="Dog">
+                            </picture>
                         </div>
                         <div class="content">
                             <p class="text">1 dog</p>
@@ -574,12 +592,15 @@
                     </div>
                 </div>
             </div>
-            <div class="blog">
+            <div class="blog" id="blog">
                 <div class="title">blog</div>
                 <div class="inner">
                     <div class="block block--wide">
                         <a href="#" class="media">
-                            <img src="" alt="">
+                            <picture>
+                                <source srcset="" type="image/webp">
+                                <img src="" srcset="" alt="">
+                            </picture>
                         </a>
                         <div class="content">
                             <a href="#" class="content__title text">Lorem ipsum dolor sit amet, con ectetur adipiscing
@@ -597,7 +618,10 @@
                     </div>
                     <div class="block">
                         <a href="#" class="media">
-                            <img src="" alt="">
+                            <picture>
+                                <source srcset="" type="image/webp">
+                                <img src="" srcset="" alt="">
+                            </picture>
                         </a>
                         <div class="content">
                             <a href="#" class="content__title text">Lorem ipsum dolor sit amet.
@@ -616,7 +640,10 @@
                     </div>
                     <div class="block">
                         <a href="#" class="media">
-                            <img src="" alt="">
+                            <picture>
+                                <source srcset="" type="image/webp">
+                                <img src="" srcset="" alt="">
+                            </picture>
                         </a>
                         <div class="content">
                             <a href="#" class="content__title text">Lorem ipsum dolor sit amet.
@@ -639,22 +666,52 @@
                 <div class="swiper-container ">
                     <div class="swiper-wrapper slider-slick">
                         <div class="swiper-slide client">
-                            <img src="img/client_walnut.png" alt="">
+                            <picture>
+                                <source srcset="img/client_walnut.webp 1x, img/client_walnut@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_walnut.png" srcset="img/client_walnut@2.png 2x"
+                                    alt="Client_walnut">
+                            </picture>
                         </div>
                         <div class="swiper-slide client">
-                            <img src="img/client_southside.png" alt="">
+                            <picture>
+                                <source srcset="img/client_southside.webp 1x, img/client_southside@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_southside.png" srcset="img/client_southside@2.png 2x"
+                                    alt="Client_southside">
+                            </picture>
                         </div>
                         <div class="swiper-slide client">
-                            <img src="img/client_giraffe.png" alt="">
+                            <picture>
+                                <source srcset="img/client_giraffe.webp 1x, img/client_giraffe@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_giraffe.png" srcset="img/client_giraffe@2.png 2x"
+                                    alt="Client_giraffe">
+                            </picture>
                         </div>
                         <div class="swiper-slide client">
-                            <img src="img/client_handmade.png" alt="">
+                            <picture>
+                                <source srcset="img/client_handmade.webp 1x, img/client_handmade@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_handmade.png" srcset="img/client_handmade@2.png 2x"
+                                    alt="Client_handmade">
+                            </picture>
                         </div>
                         <div class="swiper-slide client">
-                            <img src="img/client_ransom.png" alt="">
+                            <picture>
+                                <source srcset="img/client_ransom.webp 1x, img/client_ransom@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_ransom.png" srcset="img/client_ransom@2.png 2x"
+                                    alt="Client_ransom">
+                            </picture>
                         </div>
                         <div class="swiper-slide client">
-                            <img src="img/client_ransom.png" alt="">
+                            <picture>
+                                <source srcset="img/client_ransom.webp 1x, img/client_ransom@2.webp 2x"
+                                    type="image/webp">
+                                <img src="img/client_ransom.png" srcset="img/client_ransom@2.png 2x"
+                                    alt="Client_ransom">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -672,82 +729,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="contact-form">
-                    <h2 class="quote">contact us:</h2>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus vitae
-                        libero
-                        faucibus lacinia. Praesent pellentesque erat magna, eget elementum massa aliquet a.</p>
-                    <form action="#" method="get" class="form">
-                        <input type="text" class="form__input nav-text" placeholder="name">
-                        <input type="email" class="form__input  nav-text" placeholder="e-mail">
-                        <input type="text" class="form__input  nav-text" placeholder="message">
-                        <input type="text" class="form__input  nav-text">
-                        <div class="btn__wrapper">
-                            <button type="submit" class="btn">send</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contacts">
-                    <div class="content">
-                        <div class="company-name">
-                            <a href="" class="logo">
-                                <img src="img/logo.svg" alt="Cube">
-                            </a>
-                            <h1 class="title">A Digital acency</h1>
-                        </div>
-                        <div class="address">
-                            <p class="text">
-                                90802 California
-                                Long beach
-                                PO Box 68789
-                                300 East Ocean
-                                Boulevard
-                            </p>
-                            <a href="tel:+12345678" class="text">+91 123 45 6789</a>
-                            <a href="mailto:info@cube.com" class="text mail">info@cube.com</a>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="soc-media">
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-google-plus-square"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-flickr"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fas fa-basketball-ball"></i>
-                            </a>
-                            <a href="#" class="soc-media__icon">
-                                <i class="fab fa-tumblr"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="copyright">
-                        <p class="text">
-                            Created by 2ndself.com, with <i class="fas fa-heart"></i>
-                            exclusive for theuncreativelab.com
-                        </p>
-                        <p class="text">
-                            <i class="far fa-copyright"></i> 2014 CUBE. All rights reserved
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <header class="header">
     <div class="wrapper">
         <div class="container">
@@ -765,22 +747,22 @@
                         </span>
                         <nav class="menu__items">
                             <div class="menu__item">
-                                <a href="" class="menu__link nav-text">
+                                <a href="#about-us" class="menu__link nav-text">
                                     About us
                                 </a>
                             </div>
                             <div class="menu__item">
-                                <a href="" class="menu__link nav-text">
+                                <a href="#portfolio" class="menu__link nav-text">
                                     portfolio
                                 </a>
                             </div>
                             <div class="menu__item">
-                                <a href="" class="menu__link nav-text">
+                                <a href="#blog" class="menu__link nav-text">
                                     blog
                                 </a>
                             </div>
                             <div class="menu__item">
-                                <a href="" class="menu__link nav-text">
+                                <a href="#contact" class="menu__link nav-text">
                                     contact
                                 </a>
                             </div>
@@ -846,7 +828,82 @@
         </div>
     </div>
 </header>
-    
+    <footer class="footer" id="contact">
+    <div class="wrapper">
+        <div class="inner">
+            <div class="contact-form">
+                <h2 class="quote">contact us:</h2>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie purus vitae
+                    libero
+                    faucibus lacinia. Praesent pellentesque erat magna, eget elementum massa aliquet a.</p>
+                <form action="#" method="get" class="form">
+                    <input type="text" class="form__input nav-text" placeholder="name">
+                    <input type="email" class="form__input  nav-text" placeholder="e-mail">
+                    <input type="text" class="form__input  nav-text" placeholder="message">
+                    <input type="text" class="form__input  nav-text">
+                    <div class="btn__wrapper">
+                        <button type="submit" class="btn">send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contacts">
+                <div class="content">
+                    <div class="company-name">
+                        <a href="" class="logo">
+                            <img src="img/logo.svg" alt="Cube">
+                        </a>
+                        <h1 class="title">A Digital acency</h1>
+                    </div>
+                    <div class="address">
+                        <p class="text">
+                            90802 California
+                            Long beach
+                            PO Box 68789
+                            300 East Ocean
+                            Boulevard
+                        </p>
+                        <a href="tel:+12345678" class="text">+91 123 45 6789</a>
+                        <a href="mailto:info@cube.com" class="text mail">info@cube.com</a>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="soc-media">
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-google-plus-square"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-flickr"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fas fa-basketball-ball"></i>
+                        </a>
+                        <a href="#" class="soc-media__icon">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="text">
+                        Created by 2ndself.com, with <i class="fas fa-heart"></i>
+                        exclusive for theuncreativelab.com
+                    </p>
+                    <p class="text">
+                        <i class="far fa-copyright"></i> 2014 CUBE. All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
     <div id="popup">
         <div class="wrapper">
             <div class="inner">
