@@ -200,6 +200,7 @@ footer {
   padding: 2.1875rem 1.5625rem;
   background-color: #f0d93e;
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 .header .left-part .menu {
@@ -286,6 +287,7 @@ footer {
 .header .left-part .inner .media .soc-media {
   display: flex;
   flex-basis: 35%;
+  max-width: 35%;
   justify-content: space-between;
 }
 
@@ -301,6 +303,7 @@ footer {
 .header .left-part .inner .media .contact {
   display: flex;
   flex-basis: 30%;
+  max-width: 30%;
   justify-content: space-between;
 }
 
@@ -316,6 +319,7 @@ footer {
 .header .right-part {
   background-image: linear-gradient(90deg, #dfd8c6 0%, #d2cab7 100%);
   flex-basis: 50%;
+  max-width: 50%;
   padding: 7.5rem 13.4375rem 3.125rem 13.4375rem;
 }
 
@@ -356,6 +360,7 @@ footer {
 
 .footer .inner .contact-form {
   flex-basis: 50%;
+  max-width: 50%;
   padding: 3.125rem 5.3125rem;
   background-image: linear-gradient(90deg, #dfd8c6 0%, #d2cab7 100%);
   font-family: "Lekton";
@@ -390,7 +395,7 @@ footer {
 }
 
 .footer .inner .contact-form .form .btn {
-  padding: 0.9375rem 2.8125rem;
+  padding: 0.625rem 2.8125rem;
 }
 
 .footer .inner .contact-form .form .btn:hover {
@@ -408,6 +413,7 @@ footer {
   background-color: #f0d93e;
   padding: 7.1875rem 7.1875rem 1.5625rem 7.1875rem;
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 .footer .inner .contacts .content {
@@ -415,6 +421,11 @@ footer {
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 5rem;
+}
+
+.footer .inner .contacts .content .company-name {
+  flex-basis: 50%;
+  max-width: 50%;
 }
 
 .footer .inner .contacts .content .company-name .title {
@@ -426,6 +437,8 @@ footer {
   display: flex;
   flex-flow: column wrap;
   font-family: "Lekton";
+  flex-basis: 30%;
+  max-width: 30%;
 }
 
 .footer .inner .contacts .content .address .text {
@@ -446,6 +459,7 @@ footer {
 
 .footer .inner .contacts .content .address .mail:hover {
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .footer .inner .contacts .media {
@@ -458,6 +472,7 @@ footer {
 .footer .inner .contacts .media .soc-media {
   display: flex;
   flex-basis: 35%;
+  max-width: 35%;
   justify-content: space-between;
 }
 
@@ -480,7 +495,13 @@ footer {
   font-family: "Lekton";
   font-size: 0.8125rem;
   color: #000;
-  line-height: 24px;
+  line-height: 14px;
+  margin-bottom: 0.875rem;
+  font-weight: 600;
+}
+
+.footer .inner .contacts .copyright .text:last-child {
+  margin-bottom: 0;
 }
 
 html {
@@ -501,6 +522,7 @@ html {
   cursor: pointer;
   text-transform: uppercase;
   color: #fff;
+  word-wrap: anywhere;
 }
 
 .btn__wrapper {
@@ -542,6 +564,14 @@ html {
   font-size: 24px;
 }
 
+.title,
+.heading,
+.text,
+.nav-text,
+.quote {
+  word-wrap: anywhere;
+}
+
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
@@ -554,13 +584,13 @@ html {
 }
 
 .about-us {
-  padding: 10.9375rem 3.75rem;
+  padding: 9.375rem 3.75rem;
   font-family: "Lekton";
   line-height: 18px;
 }
 
 .about-us .caption {
-  padding: 0 11.5625rem 9.0625rem 11.5625rem;
+  padding: 0 11.5625rem 8.4375rem 11.5625rem;
   text-align: center;
 }
 
@@ -573,6 +603,7 @@ html {
   text-transform: none;
   letter-spacing: 0.1em;
   color: #303030;
+  margin-bottom: 0.625rem;
 }
 
 .about-us .content {
@@ -582,7 +613,9 @@ html {
 
 .about-us .content .article {
   flex-basis: 25%;
+  max-width: 25%;
   padding: 0 1.25rem;
+  margin-bottom: 0.9375rem;
 }
 
 .about-us .content .article .subtitle {
@@ -615,6 +648,7 @@ html {
 
 .team .block {
   flex-basis: 25%;
+  max-width: 25%;
   height: 31.25rem;
   justify-content: flex-end;
   position: relative;
@@ -784,14 +818,14 @@ html {
 }
 
 .process {
-  padding: 10.9375rem 5.3125rem 10.3125rem 5.3125rem;
+  padding: 10.9375rem 5.3125rem 9.6875rem 5.3125rem;
   line-height: 18px;
   font-family: "Lekton";
   background-color: #f7f7f7;
 }
 
 .process .caption {
-  padding: 0 11.5625rem 8.4375rem 11.5625rem;
+  padding: 0 11.5625rem 7.8125rem 11.5625rem;
   text-align: center;
 }
 
@@ -804,6 +838,7 @@ html {
   text-transform: none;
   letter-spacing: 0.1em;
   color: #303030;
+  margin-bottom: 0.625rem;
 }
 
 .process .content {
@@ -813,9 +848,10 @@ html {
 
 .process .content .block {
   flex-basis: 25%;
+  max-width: 25%;
   text-align: center;
   flex-flow: column wrap;
-  padding: 0 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 .process .content .block .icon {
@@ -945,6 +981,7 @@ html {
   top: 0;
   left: 0;
   flex-direction: column;
+  padding: 0 4.375rem;
 }
 
 .portfolio .block .portfolio__item .back .capture {
@@ -1022,7 +1059,7 @@ html {
 }
 
 .stats {
-  padding: 3.4375rem 0 7.5rem 0;
+  padding: 3.4375rem 0 6.875rem 0;
   background-color: #f3f2f2;
   font-family: "Oswald";
 }
@@ -1037,10 +1074,13 @@ html {
 .stats__inner {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .stats__inner .block {
+  flex-basis: 16.6%;
+  max-width: 16.6%;
+  padding: 0.625rem 0;
   text-align: center;
 }
 
@@ -1071,17 +1111,16 @@ html {
 
 .blog .inner .block {
   flex-basis: 25%;
+  max-width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 21.25rem;
   padding: 0 0.9375rem;
-  overflow: hidden;
 }
 
 .blog .inner .block .media {
   background-color: #8ddbcb;
-  flex-basis: 50%;
+  height: 12.5rem;
+  margin-bottom: 1.5625rem;
 }
 
 .blog .inner .block .content__title {
@@ -1090,6 +1129,8 @@ html {
   margin-bottom: 1.25rem;
   color: #303030;
   text-transform: uppercase;
+  height: 1.875rem;
+  overflow: hidden;
 }
 
 .blog .inner .block .content__text {
@@ -1109,6 +1150,8 @@ html {
 }
 
 .blog .inner .block .content__footer .author {
+  flex-basis: 50%;
+  max-width: 50%;
   color: #60d4d4;
 }
 
@@ -1118,6 +1161,9 @@ html {
 }
 
 .blog .inner .block .content__footer .link {
+  flex-basis: 50%;
+  max-width: 50%;
+  text-align: right;
   color: red;
   transition: all 0.3s ease;
 }
@@ -1128,6 +1174,7 @@ html {
 
 .blog .inner .block--wide {
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 .blog .inner .block--wide .media {
@@ -1266,6 +1313,7 @@ html {
 
 #popup .inner .popupbody .media {
   flex-basis: 60%;
+  max-width: 60%;
   padding-right: 8.125rem;
 }
 
@@ -1332,6 +1380,7 @@ html {
 
 #popup .inner .popupbody .content {
   flex-basis: 23%;
+  max-width: 23%;
   background-color: #60d4d4;
   padding: 5.625rem 1.25rem 1.25rem 1.25rem;
   font-family: "Lekton";
@@ -1360,6 +1409,7 @@ html {
 
 #popup .inner .popupbody .nav {
   flex-basis: 17%;
+  max-width: 17%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
