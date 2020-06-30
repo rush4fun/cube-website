@@ -1427,4 +1427,36 @@ html {
 #popup .inner .popupbody .nav__li:hover {
   color: #848484;
 }
+
+@media only screen and (max-width: 1110px) {
+  .header .right-part {
+    padding: 5rem 9.6875rem 1.25rem 9.6875rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header .left-part .inner {
+    padding: 1.5625rem 0.9375rem;
+  }
+
+  .header .left-part .inner .content {
+    margin-bottom: 5.625rem;
+  }
+
+  .about-us {
+    padding: 5rem 1.875rem;
+  }
+
+  .about-us .caption {
+    padding: 0 9.375rem 5rem 9.375rem;
+  }
+
+  .process {
+    padding: 5rem 3.125rem;
+  }
+
+  .process .caption {
+    padding: 0 9.375rem 5rem 9.375rem;
+  }
+}
 /*# sourceMappingURL=maps/main.css.map */
