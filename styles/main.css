@@ -1442,21 +1442,94 @@ html {
   .header .left-part .inner .content {
     margin-bottom: 5.625rem;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 992px;
+  }
 
   .about-us {
-    padding: 5rem 1.875rem;
+    padding: 3.125rem 1.875rem;
   }
 
   .about-us .caption {
-    padding: 0 9.375rem 5rem 9.375rem;
+    padding: 0 9.375rem 3.125rem 9.375rem;
   }
 
   .process {
-    padding: 5rem 3.125rem;
+    padding: 3.125rem 3.125rem;
   }
 
   .process .caption {
     padding: 0 9.375rem 5rem 9.375rem;
+  }
+
+  .portfolio {
+    padding: 3.125rem 0rem;
+  }
+
+  .portfolio .nav-portfolio__link {
+    margin-bottom: 0;
+  }
+
+  .portfolio .block {
+    margin-bottom: 3.125rem;
+  }
+
+  #popup .inner .popupbody .media {
+    padding-right: 0.625rem;
+  }
+
+  .stats {
+    padding: 3.125rem 0rem;
+  }
+
+  .blog {
+    padding: 3.125rem;
+  }
+
+  .blog .inner {
+    padding-top: 3.125rem;
+  }
+
+  .clients {
+    padding: 3.125rem 0;
+  }
+
+  .clients .slider-slick {
+    padding: 0;
+    padding-bottom: 3.125rem;
+  }
+
+  .twitter {
+    padding: 3.125rem 0;
+  }
+
+  .footer .inner .contact-form {
+    padding: 3.125rem;
+  }
+
+  .footer .inner .contacts {
+    padding: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    max-width: 576px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
