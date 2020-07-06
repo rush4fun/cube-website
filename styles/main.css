@@ -1545,6 +1545,7 @@ html {
   .footer .inner .contacts {
     flex-basis: 100%;
     max-width: 100%;
+    text-align: center;
   }
 
   .footer .inner .contacts .content,
@@ -1575,6 +1576,18 @@ html {
     max-width: 50%;
   }
 
+  .team .block:hover .back {
+    transform: none;
+  }
+
+  .team .block:hover .front {
+    transform: none;
+  }
+
+  .team .block .back {
+    display: none;
+  }
+
   .process .caption {
     padding: 0 3.125rem 1.875rem 3.125rem;
   }
@@ -1587,6 +1600,14 @@ html {
   .portfolio .block {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 250px);
+  }
+
+  .portfolio .block .portfolio__item .front {
+    display: none;
+  }
+
+  .portfolio .block .portfolio__item .back {
+    display: flex;
   }
 
   #popup .inner .popupbody .media,
