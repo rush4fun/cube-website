@@ -1610,6 +1610,14 @@ html {
     display: flex;
   }
 
+  .portfolio .block .portfolio__item {
+    display: none !important;
+  }
+
+  .portfolio .block .portfolio__item:nth-child(-n + 3) {
+    display: flex !important;
+  }
+
   #popup .inner .popupbody .media,
   #popup .inner .popupbody .content {
     flex-basis: 50%;
@@ -1629,6 +1637,16 @@ html {
     max-width: 100%;
     flex-flow: row-reverse wrap;
     justify-content: space-evenly;
+    padding: 0.3125rem;
+  }
+
+  #popup .inner .popupbody .nav__li {
+    margin-bottom: 0;
+  }
+
+  #popup .inner .close {
+    top: 2%;
+    right: 5%;
   }
 
   .stats .block {
@@ -1656,11 +1674,231 @@ html {
   .wrapper {
     max-width: 768px;
   }
+
+  #popup .inner .popupbody .media .reaction {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .wrapper {
     max-width: 576px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .quote {
+    font-size: 1.125rem;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+
+  .nav-text {
+    font-size: 0.75rem;
+  }
+
+  .header .left-part,
+  .header .left-part .inner {
+    padding: 0.625rem;
+  }
+
+  .header .left-part .menu .inner {
+    position: relative;
+  }
+
+  .header .left-part .menu .inner .close {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  .header .left-part .menu__items {
+    flex-flow: column wrap;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  .header .left-part .menu__item {
+    padding: 0.625rem;
+    border-right: none;
+    border-bottom: 1px solid #f0d93e;
+  }
+
+  .header .left-part .inner .content {
+    margin-bottom: 1.625rem;
+  }
+
+  .header .left-part .inner .media .soc-media,
+  .header .left-part .inner .media .contact {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .header .left-part .inner .media .soc-media {
+    margin-bottom: 0.625rem;
+  }
+
+  .header .right-part {
+    padding: 0.625rem;
+  }
+
+  .header .right-part .content .btn__wrapper .btn {
+    font-size: 0.75rem;
+  }
+
+  .about-us {
+    padding: 0.625rem;
+  }
+
+  .about-us .caption .title {
+    margin-bottom: 0.625rem;
+  }
+
+  .about-us .caption {
+    padding: 0.625rem;
+  }
+
+  .about-us .content .article {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .team .block {
+    flex-basis: 100%;
+    max-width: 100%;
+    height: 22.1875rem;
+  }
+
+  .team .block .front,
+  .team .block .back {
+    padding: 0.625rem;
+  }
+
+  .process {
+    padding: 0.625rem;
+  }
+
+  .process .caption .title {
+    margin-bottom: 0.625rem;
+  }
+
+  .process .caption {
+    padding: 0.625rem;
+  }
+
+  .process .content .block {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .portfolio {
+    padding: 0.625rem;
+  }
+
+  .portfolio .nav-portfolio {
+    padding: 0.625rem;
+  }
+
+  .portfolio .block {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(1, 250px);
+  }
+
+  .portfolio .block .portfolio__item .back {
+    padding: 0.625rem;
+  }
+
+  .portfolio .block .portfolio__item--big {
+    height: 250px;
+  }
+
+  #popup .inner .popupbody .media,
+  #popup .inner .popupbody .content {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  #popup .inner .popupbody .media .navigations {
+    margin-bottom: 0;
+  }
+
+  #popup .inner .popupbody .media .reaction,
+  #popup .inner .popupbody .content {
+    padding: 0.625rem;
+  }
+
+  #popup .inner .popupbody .content__text {
+    margin-bottom: 0.625rem;
+  }
+
+  .portfolio .block {
+    margin-bottom: 0.625rem;
+  }
+
+  .stats {
+    padding: 0.625rem;
+  }
+
+  .stats__inner .block {
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .blog,
+  .blog .inner {
+    padding: 0.625rem;
+  }
+
+  .blog .inner .block {
+    padding: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .blog .inner .block .media {
+    margin-bottom: 0.625rem;
+  }
+
+  .blog .inner .block .content__title {
+    margin-bottom: 0;
+  }
+
+  .twitter {
+    padding: 0.625rem;
+  }
+
+  .twitter .post .icon {
+    margin-bottom: 0.625rem;
+  }
+
+  .footer .inner .contact-form,
+  .footer .inner .contact-form .form,
+  .footer .inner .contacts {
+    padding: 0.625rem;
+  }
+
+  .footer .inner .contact-form .form .btn__wrapper {
+    padding-top: 0;
+  }
+
+  .footer .inner .contacts .content .company-name,
+  .footer .inner .contacts .content .address,
+  .footer .inner .contacts .media .soc-media {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .footer .inner .contacts .media .soc-media {
+    justify-content: space-around;
   }
 }
 
