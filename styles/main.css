@@ -1,12 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/* @include adaptiv-font(40, 16); */
-
+/** Prefixed by https://autoprefixer.github.io* PostCSS: v7.0.29,* Autoprefixer: v9.7.6* Browsers: last 4 version*/ /* @include adaptiv-font(40, 16); */
 @import url(import/swiper.min.css);
 html,
 body,
@@ -624,7 +616,6 @@ footer {
 .footer .inner .contacts .copyright .text:last-child {
   margin-bottom: 0;
 }
-
 .about-us {
   padding: 9.375rem 3.75rem;
   font-family: "Lekton";
@@ -1971,8 +1962,7 @@ footer {
   .wrapper {
     max-width: 320px;
   }
-}
-/* ANIMATION */
+} /* ANIMATION */
 @keyframes menu {
   from {
     transform: translateX(-100%);
